@@ -8,15 +8,7 @@ namespace tdd {
             double current_velocity;
             double error_threshold;
         public:
-            //Constructer
-            PIDController(double kp, double ki, double kd) {
-                kp_ = kp;
-                ki_ = ki;
-                kd_ = kd;
-            }
             
-            //Destructor 
-            ~PIDController();
 
             //Settes
 
@@ -27,8 +19,17 @@ namespace tdd {
             double getKi();
             double getKd();
 
-            double computeError();
-            double computeVelocity();
-                    
-    }
-}; //namespace
+            double compute(double, double);
+
+            //Constructer
+            PIDController();
+            PIDController(double kp, double ki, double kd) {
+                kp_ = kp;
+                ki_ = ki;
+                kd_ = kd;
+            }
+
+            //Destructor 
+            ~PIDController(){};
+    };
+} //namespace
