@@ -3,7 +3,7 @@
 
 double tdd::PIDController::compute(double target_velocity, double current_velocity)
 {
-    return 30;
+    return 66;
 }
 void tdd::PIDController::setKp(double kp)
 {
