@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.2.1)
 project (scratch)
 
-# Add project cmake modules to path.
+# Add project cmake modules to path.CMAKE_EXE_LINKER_FLAGS
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
 # We probably don't want this to run on every build.
-option(COVERAGE "Generate Coverage Data" OFF)
+option(COVERAGE "Generate Coverage Data" ON)
 
 if (COVERAGE)
     include(CodeCoverage)
