@@ -1,3 +1,17 @@
+/**
+ *  Copyright 2020 Sukoon Sarin, Nalin Das
+ *  @file test.cpp
+ *  @author Sukoon Sarin (sukoonsarin)
+ *  @author Nalin Das (nalindas9) 
+ *  @date 9/27/2020
+ *
+ *  @brief Test file 
+ *
+ *  @section DESCRIPTION
+ *
+ *  Test file containing unit tests
+ *
+ */
 #include <gtest/gtest.h>
 #include "../include/pid.hpp"
 
@@ -11,7 +25,8 @@ TEST(PIDControllerTest, classInitialization) {
 TEST(PIDControllerTest, computeNewVelocity) {
   tdd::PIDController dummyPIDController(0.2, 0.4, 0.02);
   double target_velocity = 70, current_velocity = 30;
-  EXPECT_NEAR(68, dummyPIDController.compute(target_velocity, current_velocity), 2);
+  EXPECT_NEAR(68, dummyPIDController.compute(target_velocity, 
+                                            current_velocity), 2);
 }
 
 TEST(PIDControllerTest, setParamters) {
