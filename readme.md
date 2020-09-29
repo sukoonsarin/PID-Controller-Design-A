@@ -28,6 +28,9 @@ None
 ## Overview
 
 PID Controller implementation
+<p align="center">
+ <img src="https://github.com/sukoonsarin/PID-Controller-Design-A/blob/master/UML/UML.png">
+</p>
 
 ### Dependencies
 
