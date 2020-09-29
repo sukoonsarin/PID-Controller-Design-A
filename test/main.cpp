@@ -14,7 +14,14 @@
  */
 #include <gtest/gtest.h>
 
+/**
+ *  @brief Main function for test.cpp
+ *  @param argc Argument count
+ *  @param argv Argument vector
+ *  @return Exit code 1 or 0
+ */
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
+ 
