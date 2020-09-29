@@ -1,9 +1,24 @@
 #include "../include/pid.hpp"
+#include <iostream>
+#include <cmath>
 
-
-double tdd::PIDController::compute(double target_velocity, double current_velocity)
-{
-    return 66;
+double tdd::PIDController::compute(double target_vel, double current_vel)
+{   
+    target_velocity = target_vel;
+    current_velocity = current_vel;
+    double dt = 0.1;
+    double currError = 0;
+    double prevError = 0;
+    double integError = 0;
+    double errorThreshold = 0.1;
+    std::cout << std::abs(23.3) << std::endl;
+    while(std::abs(target_velocity - current_vel) >= std::abs(errorThreshold)){
+        currError = target_velocity - current_vel;
+        integError+= currError*dt;
+        current_vel = kp_*currError + ki_*integError + (kd_*(currError - prevError))/dt;
+        prevError = currError;
+    }
+    return current_vel;
 }
 void tdd::PIDController::setKp(double kp)
 {
