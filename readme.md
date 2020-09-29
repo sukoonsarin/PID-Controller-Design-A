@@ -9,9 +9,22 @@ Part 1:
 - Driver: Sukoon Sarin
 - Navigator: Nalin DasTravis
 
+Part 2:
+- Driver: Vishnuu
+- Navigator: Karan Sutradhar
+
 ## TODO 
  
 - Need to complete PIDController methods for PID controller implementation.
+- Need to complete the cpplint and check tests and add results.
+
+## Notes
+
+- Realised that it is too ideal to isolate Part 1 and Part 2. We found the need to update the Part 1 design even in Part 2.
+- Had to make sure to test All constructors including empty constructors to ensure 100% coverage. 
+- Think twice before using git reset --hard
+- Implementation and build finally passes successfully. 
+
 
 ## Overview
 
