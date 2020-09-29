@@ -1,4 +1,4 @@
-# C++ Boilerplate
+# PID Controller Design - Pair A
 [![Build Status](https://travis-ci.org/sukoonsarin/PID-Controller-Design-A.svg?branch=master)](https://travis-ci.org/github/sukoonsarin/PID-Controller-Design-A)
 [![Coverage Status](https://coveralls.io/repos/github/sukoonsarin/PID-Controller-Design-A/badge.svg?branch=master)](https://coveralls.io/github/sukoonsarin/PID-Controller-Design-A)
 ---
@@ -7,7 +7,7 @@
 
 Part 1:
 - Driver: Sukoon Sarin
-- Navigator: Nalin DasTravis
+- Navigator: Nalin Das
 
 Part 2:
 - Driver: Vishnuu
@@ -15,8 +15,7 @@ Part 2:
 
 ## TODO 
  
-- Need to complete PIDController methods for PID controller implementation.
-- Need to complete the cpplint and check tests and add results.
+None
 
 ## Notes
 
