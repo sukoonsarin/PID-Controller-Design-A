@@ -17,12 +17,27 @@
 
 
 #include "../include/pid.hpp"
+#include <iostream>
+#include <cmath>
 
-
-double tdd::PIDController::compute(double target_velocity,
-                                    double current_velocity) {
-    // Enter your PID compute method implemetation
-    return 66;
+double tdd::PIDController::compute(double target_vel, double current_vel)
+{   
+    target_velocity = target_vel; // Set class variable target_velocity to user set target_vel
+    current_velocity = current_vel; // Set class variable current_velocity to user set current_vel
+    double dt = 0.1; // set default value dt = 0.1
+    double currError = 0; // set default to 0
+    double prevError = 0; // set default to 0
+    double integError = 0; // set default to 0
+    double errorThreshold = 0.1; // set default to 0.1 
+    double controlOutput = 0.0; // set defualt to 0
+    while(std::abs(target_velocity - current_vel) >= std::abs(errorThreshold)){ // While error still greater than threshold.
+        currError = target_velocity - current_vel; // calc currError
+        integError+= currError*dt; // update integral error
+        controlOutput = kp_*currError + ki_*integError + (kd_*(currError - prevError))/dt; // Calc PID Control output 
+        current_vel += controlOutput; // Update current velocity 
+        prevError = currError;
+    }
+    return current_vel;
 }
 
 void tdd::PIDController::setKp(double kp) {
