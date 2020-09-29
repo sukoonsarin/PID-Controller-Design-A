@@ -17,12 +17,15 @@
 
 
 #include "../include/pid.hpp"
+#include <iostream>
+#include <cmath>
 
 
 double tdd::PIDController::compute(double target_velocity,
                                     double current_velocity) {
     // Enter your PID compute method implemetation
     return 66;
+double tdd::PIDController::compute(double target_vel, double current_vel)
     target_velocity = target_vel; // Set class variable target_velocity to user set target_vel
     current_velocity = current_vel; // Set class variable current_velocity to user set current_vel
     double dt = 0.1; // set default value dt = 0.1
