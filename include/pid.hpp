@@ -80,6 +80,9 @@ class PIDController{
         kp_ = kp;
         ki_ = ki;
         kd_ = kd;
+        target_velocity = 0;
+        current_velocity = 0;
+        error_threshold = 0;
     }
 
     // PID Destructor

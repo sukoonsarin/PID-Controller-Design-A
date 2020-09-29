@@ -31,7 +31,7 @@ TEST(PIDControllerTest, classInitialization) {
 TEST(PIDControllerTest, computeNewVelocity) {
   tdd::PIDController dummyPIDController(0.2, 0.4, 0.02);
   double target_velocity = 70, current_velocity = 30;
-  EXPECT_NEAR(68, dummyPIDController.compute(target_velocity, 
+  EXPECT_NEAR(68, dummyPIDController.compute(target_velocity,
                                             current_velocity), 2);
 }
 

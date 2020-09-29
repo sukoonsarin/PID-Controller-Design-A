@@ -21,7 +21,7 @@
  * **/
 int main() {
     // Intialize target, current and new current velocity
-    double target_vel = 0, current_vel = 0, new_current_velocity = 0.;
+    double target_vel = 0, current_vel = 0;
     // Take target and current velocity from user as input
     std::cout << "Enter the desired velocity: ";
     std::cin >> target_vel;
@@ -30,7 +30,7 @@ int main() {
     // Create PIDController class object
     tdd::PIDController controller(0.2, 0.4, 0.02);
     // Compute the new current velocity using target and current velocity
-    new_current_velocity = controller.compute(target_vel, current_vel);
+    double new_current_velocity = controller.compute(target_vel, current_vel);
     std::cout << "The new velocity is: " << new_current_velocity << std::endl;;
 
     return 0;
