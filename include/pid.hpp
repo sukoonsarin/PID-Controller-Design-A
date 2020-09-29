@@ -6,7 +6,6 @@ namespace tdd {
             double kp_, ki_, kd_;
             double target_velocity;
             double current_velocity;
-            double error_threshold;
         public:
             
 
@@ -22,7 +21,11 @@ namespace tdd {
             double compute(double, double);
 
             //Constructer
-            PIDController();
+            PIDController(){
+                kp_ = 0;
+                ki_ = 0;
+                kd_ = 0;
+            };
             PIDController(double kp, double ki, double kd) {
                 kp_ = kp;
                 ki_ = ki;
